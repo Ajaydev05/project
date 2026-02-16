@@ -5,16 +5,14 @@ services:
   mongodb:
     image: mongo:6
     container_name: mongodb
-    restart: always
     ports:
       - "27017:27017"
     volumes:
-      - mongo_data:/data/db
+      - /home/ubuntu/data:/data/db
 
   backend:
     build: ./backend
     container_name: backend
-    restart: always
     ports:
       - "9000:8080"
     depends_on:
@@ -25,11 +23,9 @@ services:
   frontend:
     build: ./frontend
     container_name: nginx-frontend
-    restart: always
     ports:
       - "80:80"
     depends_on:
       - backend
 
-volumes:
-  mongo_data:
+
