@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub')
-        DOCKERHUB_REPO = "ajaydev05/mean-app"
+        DOCKERHUB_REPO = "ajaydev05/app"
     }
 
     stages {
@@ -48,5 +48,6 @@ pipeline {
 
     }
 }
+
 
 
