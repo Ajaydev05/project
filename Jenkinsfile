@@ -10,7 +10,7 @@ pipeline {
 
         stage('Clone Code') {
             steps {
-                git 'https://github.com/yourusername/your-repo.git'
+                git 'https://github.com/Ajaydev05/project.git'
             }
         }
 
@@ -48,4 +48,5 @@ pipeline {
 
     }
 }
+
 
